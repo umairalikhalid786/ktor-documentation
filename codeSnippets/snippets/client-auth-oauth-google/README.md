@@ -1,21 +1,23 @@
 # Client bearer authentication (OAuth)
 
 A sample project demonstrating how to use bearer [authentication](https://ktor.io/docs/auth.html) to get a Google's profile information. To learn more about OAuth support for accessing Google APIs, see [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2).
+> This sample is a part of the [codeSnippets](../../README.md) Gradle project.
  
 ## Obtaining client credentials
 To obtain client credentials required for accessing Google APIs, follow the steps below:
 1. Create a Google account.
-1. Open the [Google Cloud Console](https://console.cloud.google.com/apis/credentials) and create the `OAuth client ID` credentials with the `Android` application type.
-> This sample is a part of the [codeSnippets](../../README.md) Gradle project.
+2. Open the [Google Cloud Console](https://console.cloud.google.com/apis/credentials) and create the `OAuth client ID` credentials with the `Desktop app` application type.
 
 ## Running
-Before running this sample, assign a client ID to the `GOOGLE_CLIENT_ID` environment variable:
+Before running this sample, assign a client ID and client secret to the `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` environment variables:
 ```shell
 # macOS/Linux
 export GOOGLE_CLIENT_ID=yourClientId
+export GOOGLE_CLIENT_SECRET=yourClientSecret
 
 # Windows
 setx GOOGLE_CLIENT_ID yourClientId
+setx GOOGLE_CLIENT_SECRET yourClientSecret
 ```
 
 To run this sample, execute the following command in a repository's root directory:
